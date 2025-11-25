@@ -1,0 +1,92 @@
+/*
+    Il layout di una pagina web è la disposizione visiva degli elementi all'interno della pagina.
+    Include la struttura e l'organizzazione degli elementi come testi, immagini, pulsanti, menu e altri componenti.
+
+    Ci sono delle proprietà CSS che ci permettono di controllare la posizione degli elementi sulla pagina e una di queste è position.
+
+    POSITION
+    Può avere 5 valori:
+
+        - static -> il valore di default di tutti gli elementi HTML. L'elemento segue il normale flusso del documento, venendo posizionato quindi in base all'ordine in cui appare nell'HTML. Non possono essere spostati usando le proprietà top, right, bottom e left.
+
+        - relative -> gli elementi con position relative sono posizionati in relazione alla loro posizione originale nel flusso del documento. Possiamo usare le proprietà top, right, bottom e left per spostare l'elemento dalla sua posizione normale, ma lo spazio occupato dall'elemento rimane invariato nel flusso del documento.
+
+        - absolute -> gli elementi con position absolute sono posizionati rispetto al loro primo antenato non statico (cioè un elemento con position relative, absolute o fixed). Vengono rimossi dal flusso del documento, quindi non occupano spazio. Le proprietà top, right, bottom e left possono essere utilizzate per posizionarli a piacimento.
+
+        - fixed -> gli elementi con position fixed sono posizionati rispetto alla finestra del vrowser. Rimangono fissi anche quando l'utente scorre la pagina. Vengono rimossi dal flusso del documento, ma la loro posizione è sempre relativa alla finestra del viewport.
+
+        - sticky -> gli elementi con position sticky sono una combinazione di relative e fixed. Iniziano come relative e diventano fixed quando raggiungono una certa posizione durante lo scorrimento della pagina. Rimangono nel flusso del documento fino a quando non raggiungono il punto specificato (definito dalle proprietà top, right, bottom e left), momento in cui si "attaccano" al viewport.
+    
+    Riassunto:
+
+    Valore      Descrizione
+    static      Posizionamento normale, non può essere spostato.
+    relative    Posizionamento rispetto alla sua posizione originaria.
+    absolute    Posizionato rispetto al primo antenato non statico.
+    fixed       Fisso rispetto alla finestra del browser.
+    sticky      Comportamento misto tra relative e fixed
+
+    top:    distanza dal bordo superiore.
+    right:  distanza dal bordo destro.
+    bottom: distanza dal bordo inferiore.
+    left:   distanza dal bordo sinistro.
+*/
+
+body {
+    /* Per far vedere il comportamento di fixed e di sticky */
+    min-height: 300vh;
+    /* Per fare spazio all'elemento fixed */
+    padding-top: 47px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.background {
+    /* height: 80px; */
+    background-color: #d1d1d1;
+}
+
+.box {
+    padding: 0.3rem 1rem;
+    background-color: #ffff7b;
+    border: 1px dashed #313131;
+}
+
+.relative {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* Per fare in modo che sia sovrapposto a ciò che viene dopo */
+    z-index: 1;
+}
+
+.parent-absolute {
+    /* Deve avere un position diverso da static. 90% useremo relative */
+    position: relative;
+    height: 500px;
+    padding: .3rem 1rem;
+    margin: 3rem 0;
+    background-color: #d1d1d1;
+}
+
+.absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sticky {
+    position: sticky;
+    top: 50px;
+    z-index: 2;
+}
