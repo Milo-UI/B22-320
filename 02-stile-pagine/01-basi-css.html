@@ -17,77 +17,82 @@
     </style> -->
 
     <!-- Collego a questa pagina HTML un foglio di stile esterno da cui prendere tutte le regole CSS -->
+    <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="css/01-basi-css.css">
 </head>
 <body>
 
-    <!--
-        Se l'HTML serve a creare la struttura di una pagina web, il CSS si occupa di renderla presentabile.
-        Per farlo utilizziamo un foglio di stile (style sheet), ovvero un documento che contiene una lista di regole CSS che assegnano uno stile ai nostri elementi HTML.
+    <div class="wrapper">
 
-        Un set di regole CSS ha questo aspetto:
+        <!--
+            Se l'HTML serve a creare la struttura di una pagina web, il CSS si occupa di renderla presentabile.
+            Per farlo utilizziamo un foglio di stile (style sheet), ovvero un documento che contiene una lista di regole CSS che assegnano uno stile ai nostri elementi HTML.
 
-        div {
-            color: red;
-            margin: 20px;
-        }
+            Un set di regole CSS ha questo aspetto:
 
-        li {
-            font-weight: bold;
-        }
+            div {
+                color: red;
+                margin: 20px;
+            }
 
-        Ogni set è composto da:
-            - Selettore -> permette di definire quali elementi devono essere stilizzati (es.: div e li).
-            - Parentesi graffe -> contengono tutte le regole di stile che gli elementi selezionati devono avere.
-            - Dichiarazione -> è una coppia chiave/valore che definisce come debba essere stilizzato l'elemento selezionato. Composta da:
-                - Proprietà: rappresenta l'aspetto che si desidera modificare
-                - Valore: indica come deve essere modificata la proprietà. I valori possono essere, colori, dimesioni, unità di misura, ecc.
-            Una dichiarazione termina sempre col punto e virgola.
-        
-        Ci sono 3 modi per aggiungere dello stile alla nostra pagina:
-            - Con un tag STYLE direttamente nell'HTML (sconsigliato)
-            - Direttamente sull'elemento interessato con l'attributo style (sconsigliato)
-            - Con un foglio di stile separato
-    -->
+            li {
+                font-weight: bold;
+            }
 
-    <!-- <h1 style="color: orangered;">HTML & CSS - Basi CSS 01 - Basi CSS</h1> -->
+            Ogni set è composto da:
+                - Selettore -> permette di definire quali elementi devono essere stilizzati (es.: div e li).
+                - Parentesi graffe -> contengono tutte le regole di stile che gli elementi selezionati devono avere.
+                - Dichiarazione -> è una coppia chiave/valore che definisce come debba essere stilizzato l'elemento selezionato. Composta da:
+                    - Proprietà: rappresenta l'aspetto che si desidera modificare
+                    - Valore: indica come deve essere modificata la proprietà. I valori possono essere, colori, dimesioni, unità di misura, ecc.
+                Una dichiarazione termina sempre col punto e virgola.
+            
+            Ci sono 3 modi per aggiungere dello stile alla nostra pagina:
+                - Con un tag STYLE direttamente nell'HTML (sconsigliato)
+                - Direttamente sull'elemento interessato con l'attributo style (sconsigliato)
+                - Con un foglio di stile separato
+        -->
 
-    <h1>HTML & CSS - Basi CSS 01 - Basi CSS</h1>
+        <!-- <h1 style="color: orangered;">HTML & CSS - Basi CSS 01 - Basi CSS</h1> -->
 
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id nemo odio ducimus esse assumenda unde aut nulla possimus. Eius quo vero tempore esse repellendus animi ratione nihil nobis voluptatum consequatur.
-    </p>
-
-    <div>
-        <h2>Heading 2</h2>
+        <h1>HTML & CSS - Basi CSS 01 - Basi CSS</h1>
 
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis natus cum, voluptatem quia, non asperiores, corrupti totam possimus quod voluptatibus eaque sapiente voluptates quis aperiam.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id nemo odio ducimus esse assumenda unde aut nulla possimus. Eius quo vero tempore esse repellendus animi ratione nihil nobis voluptatum consequatur.
         </p>
 
+        <div>
+            <h2>Heading 2</h2>
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis natus cum, voluptatem quia, non asperiores, corrupti totam possimus quod voluptatibus eaque sapiente voluptates quis aperiam.
+            </p>
+
+            <ul>
+                <li>Voce 1</li>
+                <li>Voce 2</li>
+                <li>Voce 3</li>
+            </ul>
+        </div>
+
+        <h2>Elementi inline</h2>
+
+        <span>span tag</span>
+        <em>em tag</em>
+        <strong>strong tag</strong>
+        <a href="#!">anchor tag</a>
+
+        <h2>Elementi block</h2>
+
+        <div>div tag</div>
+        <h3>h3 tag</h3>
+        <p>paragraph tag</p>
         <ul>
-            <li>Voce 1</li>
-            <li>Voce 2</li>
-            <li>Voce 3</li>
+            <li>li tag</li>
+            <li>li tag</li>
         </ul>
+
     </div>
-
-    <h2>Elementi inline</h2>
-
-    <span>span tag</span>
-    <em>em tag</em>
-    <strong>strong tag</strong>
-    <a href="#!">anchor tag</a>
-
-    <h2>Elementi block</h2>
-
-    <div>div tag</div>
-    <h3>h3 tag</h3>
-    <p>paragraph tag</p>
-    <ul>
-        <li>li tag</li>
-        <li>li tag</li>
-    </ul>
 
 </body>
 </html>
